@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "main": "dist/Main.js",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "watch": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/Main.ts",
+    "prettify": "prettier --check --write \"src/**/*.ts\"",
+    "lint:fix": "tslint --fix -c tslint.json 'src/**/*.ts'",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "start": "node dist/Main.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettify && yarn lint:fix && yarn lint"
+    }
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.4",
+    "husky": "^3.0.5",
+    "nodemon": "^1.19.2",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.19.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.2"
+  }
+}

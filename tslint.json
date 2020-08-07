@@ -1,0 +1,53 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-config-prettier"
+    ],
+    "linterOptions": {
+        "exclude": [
+            "node_modules"
+        ]
+    },
+    "jsRules": {},
+    "rules": {
+        "array-type": [
+            true,
+            "generic"
+        ],
+        "no-return-await": true,
+        "unnecessary-constructor": true,
+        "one-line": [
+            false
+        ],
+        "align": [
+            true,
+            "parameters",
+            "elements"
+        ],
+        "indent": [
+            true,
+            "spaces"
+        ],
+        "object-literal-sort-keys": [
+            false
+        ],
+        "member-ordering": [
+            false
+        ],
+        "no-console": [
+            true
+        ],
+        "max-line-length": [
+            true,
+            256
+        ],
+        "no-empty": [
+            false
+        ],
+        "prefer-for-of": [
+            false
+        ]
+    },
+    "rulesDirectory": []
+}
